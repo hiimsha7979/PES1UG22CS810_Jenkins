@@ -9,17 +9,7 @@
       ])
       }
     }
-    stage('Build'){
-      steps{
-        build 'PES1UG22CS810-1'
-        sh 'g++ main2.cpp -o output'
-      }
-    }
-    stage('Test'){
-      steps{
-        sh './output'
-      }
-    }
+   
     stage('Deploy'){
       steps{
         echo 'deploy'
